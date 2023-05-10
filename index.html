@@ -15,6 +15,13 @@
             li.my-list{
                 background-color: orange;
             }
+
+            ul.my-kids > li {
+                background-color: blue;
+            }
+
+           
+            }
         </style>
     </head>
     <body>
@@ -27,6 +34,7 @@
                 <li><a href="#id">id</a></li>
                 <li><a href="#class">class</a></li>
                 <li><a href="#compound">compound</a></li>
+                <li><a href="#child">child</a></li>
             </ul>
         </nav> 
     </header>           
@@ -65,6 +73,49 @@
                     <li class= "my-list"> I'm inside an li with a class of my-list</li>
                     <li class= "my-list"> I'm inside an li with a class of my-list</li>
                     <li class= "my-list"> I'm inside an li with a class of my-list</li>
+                </ul>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend><a id="compound">compound</a></legend>
+            <p>A compund selector allows multiple selectors separated by commas. In this way we can apply the same rules to several selectors.</p>
+            <p>Heree's how CSS is applied to the element</p>
+            <pre><code><div#new-div, li.new-list{
+    background-color:blue;
+}</code></pre>
+
+
+            <p>Here's what it looks like:</p>
+            <div id="new-div">I'm inside a div with an id of new-div</div>/div>
+            <div>
+                <ul>
+                    <li class= "new-list"> I'm inside an li with a class of new-list</li>
+                    <li class= "new-list"> I'm inside an li with a class of new-list</li>
+                    <li class= "new-list"> I'm inside an li with a class of new-list</li>
+                </ul>
+            </div>
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend><a id="child">child</a></legend>
+            <p>A child selector allows us to acess the next immediate elements inside the next element.</p>
+            <p>Heree's how CSS is applied to the element</p>
+            <pre><code>ul.my-kids > li{
+    </background-color:green>;
+}</code></pre>
+
+
+            <p>Here's what it looks like:</p>
+            
+            <div>
+                <ul class="my-kids">
+                    <li class= "new-list"> I'm in an li inside a ul with a class of my-kids</li>
+                    <li class= "new-list"> I'm in an li inside a ul with a class of my-kids</li>
+                    <li class= "new-list"> I'm in an li inside a ul with a class of my-kids</li>
                 </ul>
             </div>
         </fieldset>
